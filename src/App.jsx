@@ -1,10 +1,12 @@
 import './App.css'
 
-export default function App() {
+function App() {
 
   return (
     <>
-    <p>Hello, React!</p>
+    <p>Helloo, React!</p>
     </>
   )
 }
+
+export default App;
