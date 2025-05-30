@@ -9,6 +9,7 @@ import FavFood from './FavFood.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <App />
     <Greeting />
     <FavFood />
   </StrictMode>,
