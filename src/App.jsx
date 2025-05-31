@@ -138,24 +138,43 @@ import './App.css'
 
 // Passing props from parent to child
 
-function Button(props) {
-const buttonStyle = {
-  color: props.color,
-  fontSize: props.fontSize + 'px'
+// function Button(props) {
+// const buttonStyle = {
+//   color: props.color,
+//   fontSize: props.fontSize + 'px'
+// }
+
+//   return (
+//     <button style={buttonStyle}>{props.text}</button>
+//   );
+// }
+// function App() {
+//   return (
+//     <div>
+//       <Button text = "suii" color="red" fontSize={12}/>
+//       <Button text = "adcs" color="blue" fontSize={14}/>
+//       <Button text = "csa" color="green" fontSize={16}/>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+function Button({ text, color, fontSize }) {
+  const buttonStyle = {
+    color: color,
+    fontSize: fontSize + "px"
+  };
+
+  return <button style={buttonStyle}>{text}</button>;
 }
 
-  return (
-    <button style={buttonStyle}>{props.text}</button>
-  );
-}
-function App() {
+export default function App() {
   return (
     <div>
-      <Button text = "suii" color="red" fontSize={12}/>
-      <Button text = "adcs" color="blue" fontSize={14}/>
-      <Button text = "csa" color="green" fontSize={16}/>
+      <Button text="Click Me!" color="blue" fontSize={12} />
+      <Button text="Don't Click Me!" color="red" fontSize={12} />
+      <Button text="Click Me!" color="blue" fontSize={20} />
     </div>
   );
 }
-
-export default App;
