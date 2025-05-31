@@ -88,35 +88,74 @@ import './App.css'
 
 // Guarding
 
-function List(props) {
-  if (!props.animals) {
-    return <div>Loading...</div>;
-  }
+// function List(props) {
+//   if (!props.animals) {
+//     return <div>Loading...</div>;
+//   }
 
-  if (props.animals.length === 0) {
-    // console.log(props);
-    return <div>There are no animals in the list!</div>;
-  }
+//   if (props.animals.length === 0) {
+//     // console.log(props);
+//     return <div>There are no animals in the list!</div>;
+//   }
 
-  return (
-    <ul>
-      {props.animals.map((animal) => {
-        return <li key={animal}>{animal}</li>;
-      })}
-    </ul>
-  );
+//   return (
+//     <ul>
+//       {props.animals.map((animal) => {
+//         return <li key={animal}>{animal}</li>;
+//       })}
+//     </ul>
+//   );
+// }
+
+// function App() {
+//   const animals = [];
+
+//   return (
+//     <div>
+//       <h1>Animals: </h1>
+//       <List animals={animals} />
+//     </div>
+//   );
+// }
+
+//Random key generation
+
+// const todos = [
+//   { task: "mow the yard", id: crypto.randomUUID() },
+//   { task: "Work on Odin Projects", id: crypto.randomUUID() },
+//   { task: "feed the cat", id: crypto.randomUUID() },
+// ];
+
+// function App() {
+//   return (
+//     <ul>
+//       {todos.map((todo) => {
+//         return <li key={todo.id}>{todo.task}</li>
+//       })}
+//     </ul>
+//   );
+// }
+
+// Passing props from parent to child
+
+function Button(props) {
+const buttonStyle = {
+  color: props.color,
+  fontSize: props.fontSize + 'px'
 }
 
+  return (
+    <button style={buttonStyle}>{props.text}</button>
+  );
+}
 function App() {
-  const animals = [];
-
   return (
     <div>
-      <h1>Animals: </h1>
-      <List animals={animals} />
+      <Button text = "suii" color="red" fontSize={12}/>
+      <Button text = "adcs" color="blue" fontSize={14}/>
+      <Button text = "csa" color="green" fontSize={16}/>
     </div>
   );
 }
-
 
 export default App;
