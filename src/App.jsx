@@ -94,6 +94,7 @@ function List(props) {
   }
 
   if (props.animals.length === 0) {
+    // console.log(props);
     return <div>There are no animals in the list!</div>;
   }
 
